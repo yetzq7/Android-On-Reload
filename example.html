@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Fracture!</title>
+
+  <style>
+    /*im gay */
+    :root {
+      --background-image: url("https://i.ibb.co/tTfNSv0m/s15.jpg");
+      --background-blur: 5px;
+      --background-darkness: 0.35;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+      position: relative;
+      background-color: #121212;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: -40px;
+      background-image: var(--background-image);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      filter: blur(var(--background-blur));
+      transform: scale(1.05);
+      z-index: -2;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, var(--background-darkness));
+      z-index: -1;
+    }
+
+    .container {
+      background-color: rgba(31, 31, 31, 0.92);
+      padding: 35px 35px;
+      border-radius: 12px;
+      width: 100%;
+      max-width: 360px;
+      text-align: center;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-weight: 600;
+      font-size: 24px;
+      color: #fff;
+    }
+
+    .subtitle {
+      margin: 0 0 22px;
+      color: #999;
+      font-size: 14px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px 15px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      border: none;
+      font-size: 16px;
+      background-color: #2a2a2a;
+      color: #fff;
+      outline: none;
+    }
+
+    input:focus {
+      outline: 2px solid #73eaff;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px 0;
+      border: none;
+      border-radius: 8px;
+      background-color: hsl(34, 100%, 56%);
+      color: #fff;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #ffb62f;
+    }
+
+    button:active {
+      background-color: #ce8e03;
+    }
+
+    button:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    #error {
+      color: #ff5555;
+      margin-top: 12px;
+      font-size: 14px;
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Welcome!</h1>
+
+    <p class="subtitle">
+      Enter your code to login.<br>
+      (Use /mobile in the mobile channel)
+    </p>
+
+    <form id="loginForm">
+      <input
+        type="text"
+        id="exchangeCode"
+        placeholder="Code"
+        autocomplete="off"
+        spellcheck="false"
+        required
+      >
+
+      <button type="submit" id="loginButton">
+        Login
+      </button>
+
+      <div id="error"></div>
+    </form>
+  </div>
+
+  <script>
+    /*
+    not properirum
+    */
+    const form = document.getElementById("loginForm");
+    const button = document.getElementById("loginButton");
+    const error = document.getElementById("error");
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      const exchangeCode = document
+        .getElementById("exchangeCode")
+        .value
+        .trim();
+
+      error.style.display = "none";
+      error.textContent = "";
+
+      if (!exchangeCode) {
+        error.textContent = "Code is required";
+        error.style.display = "block";
+        return;
+      }
+
+      button.disabled = true;
+      button.textContent = "Logging in..";
+
+      window.location.href = "com.epicgames.fortnite://authorize/?code=" + encodeURIComponent(exchangeCode); // main func
+    });
+  </script>
+
+</body>
+</html>
