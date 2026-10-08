@@ -28,4 +28,33 @@ NOT MADE FOR PATYHUB VERSIONS!
 
 ## Step 2 - Updating the manifest path and hash on Reload
 
+**Go to routes/main.js and scroll down until you see this:**
+```
+app.get("/launcher/api/public/assets/*", async (req, res) => {
+    res.json({
+        "appName": "FortniteContentBuilds",
+        "labelName": "ReloadBackend",
+        "buildVersion": "++Fortnite+Release-20.00-CL-19458861-Windows",
+        "catalogItemId": "5cb97847cee34581afdbc445400e2f77",
+        "expires": "9999-12-31T23:59:59.999Z",
+        "items": {
+            "MANIFEST": {
+                "signature": "ReloadBackend",
+                "distribution": "https://reloadbackend.ol.epicgames.com/",
+                "path": "Builds/Fortnite/Content/CloudDir/ReloadBackend.manifest",
+                "hash": "55bb954f5596cadbe03693e1c06ca73368d427f3",
+                "additionalDistributions": []
+            },
+            "CHUNKS": {
+                "signature": "ReloadBackend",
+                "distribution": "https://reloadbackend.ol.epicgames.com/",
+                "path": "Builds/Fortnite/Content/CloudDir/ReloadBackend.manifest",
+                "additionalDistributions": []
+            }
+        },
+        "assetId": "FortniteContentBuilds"
+    });
+})
+```
+
 **Note:** this is an external login, you must be at the find my account screen to be able to do it, after you see it go to your login page and enter the code. After that it will redirect you to your game (must be open) and then you can hit find my account and then back out of it and it should log you in!
