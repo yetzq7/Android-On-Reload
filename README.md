@@ -14,6 +14,7 @@ NOT MADE FOR PATYHUB VERSIONS!
 
 ## Step 1 - Get the Android manifest from your APK
 
+
 **To get the manifest, you need to check assets\Cloud in your decompiled apks folder**
 -
 ![img](https://i.ibb.co/5XGLc9XS/image.png)
