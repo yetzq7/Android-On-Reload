@@ -17,9 +17,9 @@ NOT MADE FOR PATYHUB VERSIONS!
 
 **To get the manifest, you need to check assets\Cloud\cloudcontent.json in your decompiled apks folder**
 
--
+
 ![img](https://i.ibb.co/5XGLc9XS/image.png)
--
+
 
 **It should look like this:**
 ```
