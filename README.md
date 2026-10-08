@@ -9,7 +9,7 @@ NOT MADE FOR PATYHUB VERSIONS!
 - **A brain**
 - **Reload Backend**
 - **exchange-code.js command - [view here](https://github.com/Project-Reload/Reload-Backend/blob/main/DiscordBot/commands/User/exchange-code.js)**
-- **Login page - my template can be viewed [here]()
+- **Login page - my template can be viewed [here](https://github.com/yetzq7/Android-On-Reload/blob/main/example.html)
 
 
 ## Step 1 - Get the Android manifest from your APK
