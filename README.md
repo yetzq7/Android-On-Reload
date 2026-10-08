@@ -61,7 +61,7 @@ app.get("/launcher/api/public/assets/*", async (req, res) => {
 **In buildVersion remove what is there and add what it says in cloudcontent also remember to add -Android at the end!**
 **Example: "buildVersion": "++Fortnite+Release-19.10-CL-18675304-Android"
 
-**In path, put the ManifestPath shown in cloudcontent.**
+**In path, put the ManifestPath shown in cloudcontent.json (Replace both of them)**
 **Example: "path": "Builds/Fortnite/Content/CloudDir/MpLk_vMfcRflZaV62UGbtZMWTmmPVg.manifest"
 
 **Do the same for "hash": and then thats it for the backend part**
