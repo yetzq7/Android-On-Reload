@@ -78,7 +78,7 @@ app.get("/launcher/api/public/assets/*", async (req, res) => {
 
 ## How it works
 
-**This is an external login, you must be at the find my account screen to be able to do it, after you see it go to your login page and enter the code. After that it will redirect you to your game (must be open) and then you can hit find my account and then back out of it and it should log you in!**
+**This is an external login, you must be at the find my account screen to be able to do it, after you see it go to your login page and enter the code you got from the exchange code command. After that it will redirect you to your game (must be open) and then you can hit find my account and then back out of it and it should log you in!**
 
 ```
 // this sends back the exchange code to the game
