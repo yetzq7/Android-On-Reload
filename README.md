@@ -57,4 +57,13 @@ app.get("/launcher/api/public/assets/*", async (req, res) => {
 })
 ```
 
+**With the information in cloudcontent.json, you can update that part**
+**In buildVersion remove what is there and add what it says in cloudcontent also remember to add -Android at the end!**
+**Example: "buildVersion": "++Fortnite+Release-19.10-CL-18675304-Android"
+
+**In path, put the ManifestPath shown in cloudcontent.**
+**Example: "path": "Builds/Fortnite/Content/CloudDir/MpLk_vMfcRflZaV62UGbtZMWTmmPVg.manifest"
+
+**Do the same for "hash": and then thats it for the backend part**
+
 **Note:** this is an external login, you must be at the find my account screen to be able to do it, after you see it go to your login page and enter the code. After that it will redirect you to your game (must be open) and then you can hit find my account and then back out of it and it should log you in!
