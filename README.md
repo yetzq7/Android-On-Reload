@@ -2,7 +2,7 @@
 A basic tutorial on how to get fully working mobile on Reload for 16.00+
 NOT MADE FOR PATYHUB VERSIONS!
 
-### Versions Tested: 17.30, 17.50, 18.40, 19.01, 19.10, 24.20, 23.00, 23,50, 27.11, 28.30 and more!
+### Versions Tested: 17.30, 17.50, 18.40, 19.01, 19.10, 23.00, 23.50, 24,20, 27.11, 28.30 and more!
 
 
 ## What you need:
