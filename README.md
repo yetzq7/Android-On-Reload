@@ -80,6 +80,16 @@ app.get("/launcher/api/public/assets/*", async (req, res) => {
 
 **This is an external login, you must be at the find my account screen to be able to do it, after you see it go to your login page and enter the code. After that it will redirect you to your game (must be open) and then you can hit find my account and then back out of it and it should log you in!**
 
+```
+// this sends back the exchange code to the game
+const uri = "com.epicgames.fortnite://authorize/?code=" + encodeURIComponent(code);
+
+
+console.log("uri - ", uri);
+showStatus("Redirecting you back..");
+
+```
+
 **Template Login Page:**
 <img width="917" height="898" alt="image" src="https://github.com/user-attachments/assets/0fe0d93d-1572-465a-8815-13744b45e47e" />
 
